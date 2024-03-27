@@ -5,7 +5,7 @@ export const SITE = {
   tagline: "Together, We Code for a Cause",
   description: "The community where tech innovators of Rotary International come together to turn ideas into tangible solutions that enhance our communities and the world. Start collaborating or join us in our next virtual meet-up.",
   description_short: "The community where tech innovators of Rotary International come together to turn ideas into tangible solutions that enhance our communities and the world.",
-  url: "https://d946c3c4.rotary-dev-fellowship-website.pages.dev",
+  url: "https://rotary-dev-fellowship.pages.dev",
   author: "Ricardo Tribaldos",
 };
 

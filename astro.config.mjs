@@ -4,11 +4,12 @@ import vercelStatic from "@astrojs/vercel/static";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
+import { SITE } from "@/data_files/constants";
 
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
-  site: "https://screwfast.uk",
+  site: SITE.url,
   image: {
     domains: ["images.unsplash.com"],
   },
@@ -27,7 +28,7 @@ export default defineConfig({
     tailwind(),
     sitemap(),
     starlight({
-      title: "ScrewFast Docs",
+      title: `${SITE.title} Docs`,
       defaultLocale: "root",
       locales: {
         root: {
