@@ -1,15 +1,13 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import vercelStatic from "@astrojs/vercel/static";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
-import { SITE } from "@/data_files/constants";
 
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
-  site: SITE.url,
+  site: 'https://rotary-dev-fellowship.pages.dev',
   image: {
     domains: ["images.unsplash.com"],
   },
@@ -28,7 +26,7 @@ export default defineConfig({
     tailwind(),
     sitemap(),
     starlight({
-      title: `${SITE.title} Docs`,
+      title: `RotaryDEV Fellowship Docs`,
       defaultLocale: "root",
       locales: {
         root: {
@@ -102,5 +100,4 @@ export default defineConfig({
     clientPrerender: true,
     directRenderScript: true,
   },
-  // adapter: vercelStatic(),
 });
