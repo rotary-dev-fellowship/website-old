@@ -21,16 +21,18 @@ const strings = Astro.currentLocale === "fr" ? frStrings : enStrings;
     aria-label="Global"
   >
     <div class="flex items-center justify-between">
+
       <!-- Brand logo -->
       <a
         class="flex-none rounded-lg text-xl font-bold outline-none ring-zinc-500 focus-visible:ring dark:ring-zinc-200 dark:focus:outline-none"
         href="/"
         aria-label="Brand"
       >
-        <RotaryDevLogo class="h-auto w-80" />
+        <RotaryDevLogo class="h-auto w-48 sm:w-80" />
       </a>
+
       <!-- Collapse toggle for smaller screens -->
-      <div class="ml-auto mr-5 md:hidden">
+      <div class="ml-auto md:hidden">
         <button
           type="button"
           class="hs-collapse-toggle flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-neutral-600 transition duration-300 hover:bg-neutral-200 disabled:pointer-events-none disabled:opacity-50 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:outline-none"
@@ -69,10 +71,6 @@ const strings = Astro.currentLocale === "fr" ? frStrings : enStrings;
           </svg>
         </button>
       </div>
-      <!-- ThemeIcon component specifically for smaller screens -->
-      <span class="inline-block md:hidden">
-        <ThemeIcon />
-      </span>
     </div>
     <!-- Contains navigation links -->
     <div
@@ -90,10 +88,8 @@ const strings = Astro.currentLocale === "fr" ? frStrings : enStrings;
 
         <!-- <Authentication /> -->
 
-        <!-- ThemeIcon component specifically for larger screens -->
-        <span class="hidden md:inline-block">
-          <ThemeIcon />
-        </span>
+        <!-- ThemeIcon component -->
+        <ThemeIcon />
       </div>
     </div>
   </nav>

@@ -4,6 +4,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import FeaturesGeneral from "../components/sections/features/FeaturesGeneral.astro";
 
 import features from "../data_files/features.json";
+import PrimaryCTA from "@/components/ui/buttons/PrimaryCTA.astro";
 ---
 <!--Utilizing MainLayout for the outer layout of the page, and defining meta for SEO purposes-->
 <MainLayout title="About Us | RotaryDev">
@@ -12,5 +13,10 @@ import features from "../data_files/features.json";
     title="About Us"
     subTitle="A vibrant community where tech innovators and humanitarian doers of Rotary International come together to turn ideas into tangible solutions that enhance our communities and the world."
     features={features}
+  />
+
+  <PrimaryCTA
+    title="Meet Our Members"
+    url="/members"
   />
 </MainLayout>
