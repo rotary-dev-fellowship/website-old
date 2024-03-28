@@ -1,0 +1,80 @@
+---
+import { getCollection } from "astro:content";
+import MainLayout from "@/layouts/MainLayout.astro";
+import BtnCTA from "@/components/ui/buttons/BtnCTA.astro";
+import CardMember from "@/components/ui/cards/CardMember.astro";
+import HeroSectionAlt from "@/components/sections/landing/HeroSectionAlt.astro";
+import { SITE } from "@/data_files/constants";
+import type { CollectionEntry } from "astro:content";
+
+// Fetching all members from the "members" collection
+const members: CollectionEntry<"members">[] = (
+  await getCollection("members")
+).filter((member) => member.data.active);
+
+// Define variables for page content
+const title: string = "Members";
+const subTitle: string = "Meet the innovative minds powering the Rotary Fellowship of Developers' global initiatives.";
+
+const pageTitle: string = `${title} | ${SITE.title}`;
+---
+
+<MainLayout
+  title={pageTitle}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://rotary-dev-fellowship.pages.dev/members",
+    "url": "https://rotary-dev-fellowship.pages.dev/members",
+    "name": pageTitle,
+    "description": subTitle,
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": "https://rotary-dev-fellowship.pages.dev",
+      "name": SITE.title,
+      "description": SITE.description_short
+    },
+    "inLanguage": "en-US"
+  }}
+>
+  <div
+    class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+  >
+    <!-- TITLES -->
+    <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+      <div class="flex items-center gap-12">
+        <h1
+          class="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
+        >
+          {title}
+        </h1>
+        {
+          subTitle && (
+            <p class="hidden max-w-screen-sm text-pretty text-neutral-600 dark:text-neutral-400 md:block">
+              {subTitle}
+            </p>
+          )
+        }
+      </div>
+    </div>
+
+    <!-- MEMBERS -->
+    <section class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8 mb-32">
+      {
+        members.map((member, index) => {
+          return <section>
+            <CardMember memberEntry={member} />
+          </section>;
+        })
+      }
+    </section>
+
+    <!-- CTA -->
+    <HeroSectionAlt
+      title="Eager to Be Part of This Fellowship?"
+      subTitle="Are you a Rotarian developer passionate about technology and service? Join us and be part of a network that's making a difference in the world."
+    >
+      <BtnCTA text="Join Us Now!" url="/join-us" />
+    </HeroSectionAlt>
+  </div>
+</MainLayout>

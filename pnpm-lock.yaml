@@ -29,6 +29,9 @@ dependencies:
   astro-compressor:
     specifier: ^0.4.1
     version: 0.4.1
+  country-code-emoji:
+    specifier: ^2.3.0
+    version: 2.3.0
   globby:
     specifier: ^14.0.1
     version: 14.0.1
@@ -2310,6 +2313,10 @@ packages:
   /cookie@0.6.0:
     resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
     engines: {node: '>= 0.6'}
+    dev: false
+
+  /country-code-emoji@2.3.0:
+    resolution: {integrity: sha512-MqmIWr3aucoU/3XZU44e0sz6izAlErqaUYp9/NFzdnzb9TrwwornyW3ws2da5TSnpTUr2qP2840oJW9oNKXCoQ==}
     dev: false
 
   /cross-spawn@7.0.3:

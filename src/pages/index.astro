@@ -21,6 +21,7 @@ import imgAccess from "@/images/access.jpg";
 import imgCollab from "@/images/collab.jpg";
 import imgMentor from "@/images/mentor.jpg";
 import imgWorkshop from "@/images/workshop.jpg";
+import GithubBtn from "@/components/ui/buttons/GithubBtn.astro";
 
 const avatarSrcs: Array<string> = [
   "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
@@ -120,12 +121,12 @@ const avatarSrcs: Array<string> = [
     ]}
     statistics={[
       {
-      count: "9",
+      count: "12",
       description:
         "🤓 Developers connected — fostering innovation across the globe",
       },
       {
-        count: "6",
+        count: "7",
         description:
           "🌐 Countries represented — creating a diverse and inclusive community",
       },
@@ -155,6 +156,10 @@ const avatarSrcs: Array<string> = [
   <HeroSectionAlt
     title="Let's Build Together"
     subTitle="Are you a Rotarian developer passionate about technology and service? Join us and be part of a network that's making a difference in the world."
-    url="https://github.com/rotary-dev-fellowship"
-  />
+  >
+    <GithubBtn
+      url="https://github.com/rotary-dev-fellowship"
+      title="Visit Us on GitHub"
+    />
+  </HeroSectionAlt>
 </MainLayout>

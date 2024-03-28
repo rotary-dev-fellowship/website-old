@@ -1,0 +1,31 @@
+---
+const { text, url, target } = Astro.props;
+
+interface Props {
+  text: string;
+  url: string;
+  target?: string;
+}
+
+const baseClasses =
+  "group inline-flex items-center justify-center gap-x-3 rounded-full px-8 py-3 text-center text-sm font-medium text-neutral-700 ring-zinc-500 focus-visible:ring transition duration-300 outline-none";
+const borderClasses = "border border-transparent";
+const bgColorClasses = "bg-yellow-400 dark:focus:outline-none";
+const hoverClasses = "hover:shadow-2xl hover:shadow-yellow-500";
+const fontSizeClasses = "2xl:text-base";
+const ringClasses = "dark:ring-zinc-200";
+
+// if url is external, open in new tab
+const _target = url.startsWith("http") ? "_blank" : "_self";
+const _aRel = url.startsWith("http") ? "noopener noreferrer" : "";
+---
+
+<a
+  class={`${baseClasses} ${borderClasses} ${bgColorClasses} ${hoverClasses} ${fontSizeClasses} ${ringClasses}`}
+  href={url}
+  target={target || _target}
+  rel={_aRel}
+>
+  <slot name="icon" />
+  {text}
+</a>

@@ -2,6 +2,7 @@
 const navBarLinks = [
   { name: "Home", url: "/" },
   { name: "About", url: "/about-us" },
+  { name: "Members", url: "/members" },
   // { name: "Blog", url: "/blog" },
   { name: "Join Us", url: "/join-us" },
 ];
@@ -11,6 +12,7 @@ const footerLinks = [
     section: "Fellowship",
     links: [
       { name: "About Us", url: "/about-us" },
+      { name: "Members", url: "/members" },
       { name: "Join Us", url: "/join-us" },
       // { name: "Projects", url: "/projects" },
       // { name: "Mentorship", url: "/mentorship" },
