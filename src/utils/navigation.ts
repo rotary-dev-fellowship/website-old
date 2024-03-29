@@ -4,7 +4,7 @@ const navBarLinks = [
   { name: "About", url: "/about-us" },
   { name: "Members", url: "/members" },
   // { name: "Blog", url: "/blog" },
-  { name: "Join Us", url: "/join-us" },
+  { name: "Join Us", url: "/docs/guides/getting-started" },
 ];
 // An array of links for footer
 const footerLinks = [
@@ -13,7 +13,7 @@ const footerLinks = [
     links: [
       { name: "About Us", url: "/about-us" },
       { name: "Members", url: "/members" },
-      { name: "Join Us", url: "/join-us" },
+      { name: "Join Us", url: "/docs/guides/getting-started" },
       // { name: "Projects", url: "/projects" },
       // { name: "Mentorship", url: "/mentorship" },
       // { name: "Workshops & Events", url: "/events" },
@@ -23,7 +23,7 @@ const footerLinks = [
   {
     section: "Resources",
     links: [
-      // { name: "Documentation", url: "/documentation" },
+      { name: "Documentation", url: "/docs" },
       // { name: "Blog", url: "/blog" },
       { name: "FAQ", url: "/faq" },
       { name: "Rotary International", url: "https://rotary.org" },

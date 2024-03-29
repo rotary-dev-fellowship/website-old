@@ -1,0 +1,27 @@
+---
+title: Recommended Tools
+description: Dive into the essential tools and resources crucial for participating in our fellowship's projects and collaborations.
+sidebar:
+  label: Tools
+  order: 1
+---
+import {
+  Card,
+  CardGrid,
+  LinkCard,
+} from "@astrojs/starlight/components";
+
+<CardGrid>
+  <Card title="Git" icon="seti:git">
+    Essential for project collaboration and contributing.
+    <LinkCard title="Download Git" href="https://git-scm.com/downloads" />
+  </Card>
+  <Card title="GitHub" icon="seti:github">
+    The platform where we host our projects and collaborate.
+    <LinkCard title="Join GitHub" href="https://github.com/join" />
+  </Card>
+  <Card title="Visual Studio Code (VS Code)" icon="seti:notebook">
+    A powerful editor for coding, ideal for working on our projects.
+    <LinkCard title="Download VS Code" href="https://code.visualstudio.com/Download" />
+  </Card>
+</CardGrid>

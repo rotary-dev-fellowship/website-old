@@ -1,0 +1,173 @@
+---
+title: 'Your first contribution: Create your member profile'
+description: 'Learn how to create your member profile in our website'
+sidebar:
+  label: Create Your Profile
+  order: 3
+---
+import {
+  Aside,
+  LinkCard,
+  Steps,
+} from "@astrojs/starlight/components";
+
+Welcome to the Rotary Fellowship of Developers! Your first step as a new member is to create your member profile on our website. This guide will walk you through the process step by step.
+
+## Prerequisites
+
+Before you begin, make sure you have a GitHub account and you are logged in.
+
+<LinkCard title="New to GitHub?" description="If you're new to GitHub, refer to our GitHub Guide to get started." href="/docs/guides/github-contribution" />
+
+## Step-by-Step Guide
+
+### 1. Fork the Website Repository
+
+First, visit the RotaryDEV Fellowship Website Repository and fork it to your GitHub account. This creates your own copy of the website project where you can make changes.
+
+<LinkCard title="RotaryDEV Fellowship Website Repository" target="_blank" href="https://github.com/rotary-dev-fellowship/website" />
+
+If this is your first time forking a repository, follow these steps:
+
+<Steps>
+  1. Click the "Fork" button in the top right corner of the repository page:
+    ![Fork Button](@/images/docs/guides/make-your-first-contribution-fork-1.png)
+
+  2. Select your GitHub account as the destination for the fork:
+    ![Fork Destination](@/images/docs/guides/make-your-first-contribution-fork-2.png)
+</Steps>
+
+<Aside title="Your own copy of the whole project!" type="note">
+  Forking the repository creates a copy of the entire project in your GitHub account:
+  - You can make changes to your fork without affecting the original project.
+  - When you're ready to share your changes, you can submit a pull request to the original repository.
+</Aside>
+
+<LinkCard title="Check the project structure" description="For your reference, here's the file structure of the project." href="#file-structure-reference" />
+
+### 2. Open editor mode in your forked repository
+
+Go to your forked repository in GitHub and press the `.` key to turn GitHub into an editor mode.
+![Editor Mode](@/images/docs/guides/make-your-first-contribution-editor-mode.png)
+
+<Aside title="Not working?" type="note">
+  If you are not able to open the editor mode, you can replace the URL with the following format:
+
+  ```plaintext
+  Before: https://github.com/<your-github-username>/<repo-name>
+                         |||
+   After: https://github.dev/<your-github-username>/<repo-name>
+  ```
+
+  > Notice the change from `github.com` to `github.dev`.
+
+</Aside>
+
+### 3. Prepare your Profile Picture
+
+<Steps>
+  1. Find a good picture of yourself
+
+  2. Crop the picture to a square aspect ratio (1:1)
+     <LinkCard title="Need help?" target="_blank" href="https://squareanimage.com/squarecrop" />
+
+  3. Name the picture `john-doe.jpg` (replace "john-doe" with your actual name).
+
+  4. Browse to `<project-root>/src/images/members/` in your online editor and upload your picture:
+     ![Upload Picture](@/images/docs/guides/make-your-first-contribution-upload-picture.png)
+     <Aside title="How to upload?" type="tip">
+       You could:
+       - Drag and drop the picture file into the `members` folder in the file explorer
+       - Right-click the `members` folder and select `Upload...`
+     </Aside>
+</Steps>
+
+### 3. Download and Fill Out Your Profile Template
+
+<Steps>
+  1. Download the member profile template from [here](https://rotary-dev-fellowship.pages.dev/new-member-template.md) or copy it directly from here `<project-root>/public/new-member-template.md` in the online editor.
+  2. Upload the downloaded template to `<project-root>/src/content/members/` in your online editor, or paste it if you copied it directly.
+  3. Rename the file to `john-doe.md` (replace "john-doe" with your actual name).
+  4. Fill out the template with your personal information. Make sure to replace all the placeholder data with your actual data.
+     ![Edit member template file](@/images/docs/guides/make-your-first-contribution-upload-edit-template.png)
+</Steps>
+
+### 4. Commit Your Changes
+
+After adding your picture and creating your profile file, commit the changes to your repository following these steps:
+
+<Steps>
+  1. Go to the `Source Control` tab in the online editor:
+     ![Source control panel](@/images/docs/guides/make-your-first-contribution-source-control-1.png)
+
+  2. Add your changes to the staging area by clicking the `+` button next to the files you've modified (number 2 in the previous image).
+
+  3. Enter a commit message (number 2) in the picture below:
+     ![Commit changes](@/images/docs/guides/make-your-first-contribution-source-control-2.png)
+
+  4. Click the `Commit & Push` button to save your changes (number 3 in the picture above).
+</Steps>
+
+<Aside title="Congratulations" type="tip">
+
+  You've successfully committed your changes to your forked repository (your own copy of the project).
+
+  All commits made to the project are saved in the Git history and can be reviewed at any time:
+  ![Git History](@/images/docs/guides/make-your-first-contribution-source-control-3.png)
+</Aside>
+
+### 5. Submit a Pull Request (PR)
+Once you've committed your profile to your fork, create a pull request to the original repository. This notifies the repository maintainers to review and merge your contribution into the original project.
+
+<Steps>
+  1. The easiest way to create a PR is to go back to the repository page (replacing `github.dev` with `github.com` in the URL), then:
+     - Click the `Contribute` button (`1`)
+     - Click the `Open pull request` button in the dropdown menu (`2`).
+       ![Create PR](@/images/docs/guides/make-your-first-contribution-pr-1.png)
+  2. Review the changes you've made and click the `Create pull request` button to submit your PR (`3`).
+     ![Create PR](@/images/docs/guides/make-your-first-contribution-pr-2.png)
+
+  3. Add a title and description (optional) to your PR, then click the `Create pull request` button to submit it (`4`).
+     ![Create PR](@/images/docs/guides/make-your-first-contribution-pr-3.png)
+</Steps>
+
+<Aside title="Congratulations" type="note">
+  You've successfully submitted your pull request to the original repository. The repository maintainers will review your contribution and merge it into the project if everything looks good.
+</Aside>
+
+## Conclusion
+
+Creating your member profile is a great way to introduce yourself to the Rotary Fellowship of Developers community. If you encounter any issues during this process or have questions, don't hesitate to reach out for assistance. Welcome aboard, and we look forward to your contributions!
+
+## File Structure Reference
+
+For your reference, here's the file structure of the project:
+
+```plaintext
+public
+├── new-member-template.md    <------ THIS IS THE TEMPLATE FILE
+src
+├── components
+│   ├── ...
+├── content
+│   ├── config.ts
+│   ├── docs
+│   │   ├── ...
+│   ├── members
+│   │   └── john-doe.md       <------ THIS IS YOUR PROFILE FILE
+├── data_files
+│   ├── ...
+├── env.d.ts
+├── images
+│   ├── members
+│   │   └── john-doe.png      <------ THIS IS YOUR PICTURE
+│   ├── ...
+├── layouts
+│   └── ...
+├── pages
+│   ├── ...
+├── styles
+│   ├── ...
+└── utils
+    └── ...
+```

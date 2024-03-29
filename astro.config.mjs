@@ -26,52 +26,41 @@ export default defineConfig({
     tailwind(),
     sitemap(),
     starlight({
-      title: `RotaryDEV Fellowship Docs`,
+      title: 'RotaryDEV Fellowship Docs',
       defaultLocale: "root",
       locales: {
         root: {
           label: "English",
           lang: "en",
         },
-        de: { label: "Deutsch", lang: "de" },
-        es: { label: "Español", lang: "es" },
-        fa: { label: "Persian", lang: "fa", dir: "rtl" },
-        fr: { label: "Français", lang: "fr" },
-        ja: { label: "日本語", lang: "ja" },
-        "zh-cn": { label: "简体中文", lang: "zh-CN" },
+        // de: { label: "Deutsch", lang: "de" },
+        // es: { label: "Español", lang: "es" },
+        // fa: { label: "Persian", lang: "fa", dir: "rtl" },
+        // fr: { label: "Français", lang: "fr" },
+        // ja: { label: "日本語", lang: "ja" },
+        // "zh-cn": { label: "简体中文", lang: "zh-CN" },
       },
       // https://starlight.astro.build/guides/sidebar/
       sidebar: [
         {
           label: "Quick Start Guides",
-          translations: {
-            de: "Schnellstartanleitungen",
-            es: "Guías de Inicio Rápido",
-            fa: "راهنمای شروع سریع",
-            fr: "Guides de Démarrage Rapide",
-            ja: "クイックスタートガイド",
-            "zh-cn": "快速入门指南",
-          },
-          autogenerate: { directory: "guides" },
+          // translations: {
+          //   de: "Schnellstartanleitungen",
+          //   es: "Guías de Inicio Rápido",
+          //   fa: "راهنمای شروع سریع",
+          //   fr: "Guides de Démarrage Rapide",
+          //   ja: "クイックスタートガイド",
+          //   "zh-cn": "快速入门指南",
+          // },
+          autogenerate: { directory: "docs/guides" },
         },
         {
-          label: "Tools & Equipment",
-          items: [
-            { label: "Tool Guides", link: "tools/tool-guides/" },
-            { label: "Equipment Care", link: "tools/equipment-care/" },
-          ],
-        },
-        {
-          label: "Construction Services",
-          autogenerate: { directory: "construction" },
-        },
-        {
-          label: "Advanced Topics",
-          autogenerate: { directory: "advanced" },
+          label: "Resources",
+          autogenerate: { directory: "docs/resources" },
         },
       ],
       social: {
-        github: "https://github.com/mearashadowfax/ScrewFast",
+        github: "https://github.com/rotary-dev-fellowship",
       },
       disable404Route: true,
       customCss: ["./src/styles/starlight.css"],
@@ -82,11 +71,17 @@ export default defineConfig({
       head: [
         {
           tag: "meta",
-          attrs: { property: "og:image", content: "https://screwfast.uk" + "/social.png" },
+          attrs: {
+            property: "og:image",
+            content: "https://rotary-dev-fellowship.pages.dev" + "/docs-social.webp"
+          },
         },
         {
           tag: "meta",
-          attrs: { property: "twitter:image", content: "https://screwfast.uk" + "/social.png" },
+          attrs: {
+            property: "twitter:image",
+            content: "https://rotary-dev-fellowship.pages.dev" + "/docs-social.webp"
+          },
         },
       ],
     }),
