@@ -39,11 +39,11 @@ export const { getStaticPaths, GET } = OGImageRoute({
   getImageOptions: (_path, page: (typeof pages)[number]) => {
     // @todo This is a bit hacky. Should we enforce that the title and
     // description are always required in the collection schemas?
-    const title = (page.title === undefined && typeof page.title === 'string')
+    const title = (page.title !== undefined && typeof page.title === 'string')
       ? page.title
       : SITE.title;
 
-    const description = (page.description === undefined && typeof page.description === 'string')
+    const description = (page.description !== undefined && typeof page.description === 'string')
       ? page.description
       : SITE.description;
 
