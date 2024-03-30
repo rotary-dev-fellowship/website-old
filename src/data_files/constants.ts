@@ -1,4 +1,5 @@
 import ogImageSrc from "@/images/social.png";
+import type { OGImageOptions } from "node_modules/astro-og-canvas/dist/types";
 
 export const SITE = {
   title: "ScrewFast",
@@ -36,4 +37,22 @@ export const OG = {
   title: `${SITE.title}: : Hardware Tools & Construction Services`,
   description: "Equip your projects with ScrewFast's top-quality hardware tools and expert construction services. Trusted by industry leaders, ScrewFast offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
   image: ogImageSrc,
+  generateImageOptions: (title: string, description: string) => {
+    // https://github.com/delucis/astro-og-canvas/tree/latest/packages/astro-og-canvas#image-options
+    const imageOptions: OGImageOptions = {
+      title,
+      description,
+      bgGradient: [
+        [63, 63, 70],
+        [0, 0, 0],
+      ],
+      border: { color: [63, 63, 70], width: 20 },
+      logo: {
+        path: './src/images/icon.png',
+        size: [100],
+      },
+    };
+
+    return imageOptions;
+  },
 };

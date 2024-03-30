@@ -1,7 +1,7 @@
 import { getCollection, type ContentEntryMap } from "astro:content";
 import { OGImageRoute } from "astro-og-canvas";
-import { SITE } from "@/data_files/constants";
 import { collections } from "@/content/config";
+import { OG, SITE } from "@/data_files/constants";
 
 const _collections = Object.keys(collections) as (keyof ContentEntryMap)[];
 
@@ -34,19 +34,6 @@ export const { getStaticPaths, GET } = OGImageRoute({
       ? page.description
       : SITE.description;
 
-    return {
-      // https://github.com/delucis/astro-og-canvas/tree/latest/packages/astro-og-canvas#image-options
-      title,
-      description,
-      bgGradient: [
-        [63, 63, 70],
-        [0, 0, 0],
-      ],
-      border: { color: [63, 63, 70], width: 20 },
-      logo: {
-        path: './src/images/icon.png',
-        size: [100],
-      },
-    };
+    return OG.generateImageOptions(title, description);
   },
 });
