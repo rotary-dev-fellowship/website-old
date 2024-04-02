@@ -7,6 +7,7 @@ sidebar:
 ---
 import {
   Aside,
+  FileTree,
   LinkCard,
   Steps,
 } from "@astrojs/starlight/components";
@@ -53,10 +54,12 @@ Go to your forked repository in GitHub and press the `.` key to turn GitHub into
 <Aside title="Not working?" type="note">
   If you are not able to open the editor mode, you can replace the URL with the following format:
 
-  ```plaintext
-  Before: https://github.com/<your-github-username>/<repo-name>
-                         |||
-   After: https://github.dev/<your-github-username>/<repo-name>
+  ```plaintext ins="dev" del="com"
+  Change this:
+    https://github.com/<your-github-username>/<repo-name>
+
+  to this:
+    https://github.dev/<your-github-username>/<repo-name>
   ```
 
   > Notice the change from `github.com` to `github.dev`.
@@ -143,31 +146,26 @@ Creating your member profile is a great way to introduce yourself to the Rotary 
 
 For your reference, here's the file structure of the project:
 
-```plaintext
-public
-├── new-member-template.md    <------ THIS IS THE TEMPLATE FILE
-src
-├── components
-│   ├── ...
-├── content
-│   ├── config.ts
-│   ├── docs
-│   │   ├── ...
-│   ├── members
-│   │   └── john-doe.md       <------ THIS IS YOUR PROFILE FILE
-├── data_files
-│   ├── ...
-├── env.d.ts
-├── images
-│   ├── members
-│   │   └── john-doe.png      <------ THIS IS YOUR PICTURE
-│   ├── ...
-├── layouts
-│   └── ...
-├── pages
-│   ├── ...
-├── styles
-│   ├── ...
-└── utils
-    └── ...
-```
+<FileTree>
+- public
+  - **new-member-template.md** THIS IS THE TEMPLATE FILE
+- src
+  - components/
+  - content
+    - config.ts
+    - members
+      - **john-doe.md** THIS IS YOUR PROFILE FILE
+      - ...
+    - ...
+  - data_files/
+  - env.d.ts
+  - images
+    - members
+      - **john-doe.png** THIS IS YOUR PICTURE
+      - ...
+    - ...
+  - layouts/
+  - pages/
+  - styles/
+  - utils/
+</FileTree>

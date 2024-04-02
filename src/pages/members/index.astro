@@ -10,7 +10,9 @@ import type { CollectionEntry } from "astro:content";
 // Fetching all members from the "members" collection
 const members: CollectionEntry<"members">[] = (
   await getCollection("members")
-).filter((member) => member.data.active);
+)
+  .filter((member) => member.data.active)
+  .sort((a, b) => a.data.dateJoined.getTime() - b.data.dateJoined.getTime());
 
 // Define variables for page content
 const title: string = "Members";

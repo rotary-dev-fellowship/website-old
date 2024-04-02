@@ -27,6 +27,9 @@ export default defineConfig({
     sitemap(),
     starlight({
       title: 'RotaryDEV Fellowship Docs',
+      editLink: {
+        baseUrl: 'https://github.com/rotary-dev-fellowship/website/edit/develop/',
+      },
       defaultLocale: "root",
       locales: {
         root: {

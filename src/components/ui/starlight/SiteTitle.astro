@@ -2,7 +2,7 @@
 import docs from "@/images/starlight/docs_logo.svg?raw";
 import type { Props } from "@astrojs/starlight/props";
 import { SITE } from "@/data_files/constants";
-import RotaryDevLogo from "../icons/RotaryDevLogo.astro";
+import BrandLogo from "@/components/BrandLogo.astro";
 ---
 
 <span class="site-title flex">
@@ -11,7 +11,7 @@ import RotaryDevLogo from "../icons/RotaryDevLogo.astro";
     href="/"
     aria-label={SITE.title}
   >
-    <RotaryDevLogo />
+    <BrandLogo />
   </a>
   <a class="docs-logo" href="/docs" set:html={docs} aria-label="Docs" />
 </span>
