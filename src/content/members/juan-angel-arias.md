@@ -1,6 +1,6 @@
 ---
 name: Juan Angel Arias
-image: "@memberImages/juanangelarias.png"
+image: "@memberImages/juan-angel-arias.jpg"
 languages: ['Spanish','English']
 
 jobTitle: Software Developer
@@ -22,8 +22,8 @@ rotaryClub: {
   city: "Ankeny",
   state: "IA",
   country: "US",                        # Use the ISO 3166-1 alpha-2 country code: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-  districtNumber: "6000"
+  districtNumber: 6000
 }
 
-dateJoined: 2019-02-01					# Joined Rotary in 1993
+dateJoined: 2024-04-03
 ---
