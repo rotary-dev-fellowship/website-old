@@ -3,6 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
+import starlightImageZoom from "starlight-image-zoom";
 
 // https://astro.build/config
 export default defineConfig({
@@ -86,6 +87,9 @@ export default defineConfig({
             content: "https://rotary-dev-fellowship.pages.dev" + "/docs-social.webp"
           },
         },
+      ],
+      plugins: [
+        starlightImageZoom(),
       ],
     }),
     compressor({
